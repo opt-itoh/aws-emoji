@@ -1,0 +1,3 @@
+[submodule "AWS-Karuta"]
+	path = AWS-Karuta
+	url = https://github.com/jaws-ug/AWS-Karuta.git

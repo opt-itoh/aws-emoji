@@ -1,0 +1,17 @@
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  CreateAwsEmoji:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: create-aws-emoji
+      CodeUri: ./
+      Handler: index.handler
+      MemorySize: 1024
+      Runtime: nodejs8.10
+      Timeout: 30
+      Environment:
+        Variables:
+          BucketName: YOUR_UNIQUE_BUCKET_NAME
+      Policies:
+        - S3CrudPolicy:
+            BucketName: YOUR_UNIQUE_BUCKET_NAME
